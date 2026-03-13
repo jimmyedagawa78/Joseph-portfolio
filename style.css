@@ -633,7 +633,10 @@
     overflow: hidden;
     transition: border-color .3s;
   }
-  .article-card:hover { border-color: rgba(255,255,255,.16); }
+  .article-card { cursor: pointer; }
+  .article-card:hover { border-color: rgba(255,255,255,.16); transform: translateY(-3px); transition: transform .25s, border-color .25s; }
+  .article-card .article-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s; }
+  .article-card:hover .article-img img { transform: scale(1.06); }
   .article-img {
     position: relative; overflow: hidden;
   }
