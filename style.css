@@ -172,10 +172,14 @@
   }
   .hero-grid-item:hover::after { opacity: 1; }
   .hero-label {
-    position: absolute; bottom: 12px; left: 14px;
-    font-size: .65rem; letter-spacing: .14em;
-    text-transform: uppercase; color: rgba(255,255,255,.7);
-    z-index: 2;
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 28px 14px 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem; letter-spacing: .12em;
+    text-transform: uppercase; color: #fff;
+    z-index: 4;
+    background: linear-gradient(to top, rgba(0,0,0,.85) 0%, transparent 100%);
+    text-shadow: 0 1px 6px rgba(0,0,0,.9);
   }
   .hero-overlay {
     position: absolute; inset: 0;
@@ -574,14 +578,22 @@
     transition: color .3s;
   }
   .logo-cell:hover .logo-name { color: var(--white); }
-  .logo-expand {
-    position: absolute; top: 10px; right: 10px;
-    font-size: .6rem; letter-spacing: .12em;
-    color: var(--accent); opacity: 0;
-    transition: opacity .3s;
-    text-transform: uppercase;
+  .logo-expand { display: none; }
+  /* Holographic shimmer on logo cells */
+  .logo-cell::after {
+    content: ''; position: absolute; inset: 0; z-index: 2;
+    background: linear-gradient(125deg, transparent 30%, rgba(255,255,255,.08) 50%, transparent 70%);
+    opacity: 0; transition: opacity .3s;
+    pointer-events: none;
   }
-  .logo-cell:hover .logo-expand { opacity: 1; }
+  .logo-cell:hover::after { opacity: 1; animation: logo-holo .6s ease; }
+  @keyframes logo-holo {
+    0%   { background-position: -100% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .logo-cell:hover { box-shadow: 0 0 0 1px rgba(201,168,76,.3), 0 8px 32px rgba(201,168,76,.08); }
+  }
+  /* logo-expand removed */
   /* Mock SVG logos */
   .lm-a { font-family: 'Bebas Neue',sans-serif; font-size: 2.8rem; color: #e84c1e; letter-spacing:-.02em; }
   .lm-b {
