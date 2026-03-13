@@ -1,12 +1,14 @@
 # Joseph Blessing Stephen — Portfolio
 
-Personal portfolio website. Built as a single-page HTML file with vanilla JS.
+Personal portfolio website. Single-page app with separated CSS and JS.
 
 ## File Structure
 
 ```
 /
-├── index.html              ← the entire site
+├── index.html              ← HTML structure (31 KB)
+├── style.css               ← All styles (37 KB)
+├── script.js               ← Navigation, tilt effect, cursor (4 KB)
 └── images/
     ├── home/
     │   ├── social.jpg      ← Home card: Social & Content (portrait, 3:4 ratio)
@@ -19,11 +21,9 @@ Personal portfolio website. Built as a single-page HTML file with vanilla JS.
     │   ├── bottom-left.jpg ← Hero grid bottom-left
     │   └── bottom-right.jpg
     ├── social/
-    │   ├── post-1.jpg      ← Social & Content design tab images
+    │   ├── post-1.jpg
     │   ├── post-2.jpg
     │   └── ...
-    ├── film/
-    │   └── (thumbnails auto-pulled from YouTube — no files needed)
     └── logos/
         ├── logo-1.jpg
         └── ...
@@ -41,6 +41,5 @@ to:
 ```
 
 ## Hosting
-
-This site is hosted on GitHub Pages.
+Hosted on GitHub Pages.
 Live URL: `https://[your-username].github.io/[repo-name]`
