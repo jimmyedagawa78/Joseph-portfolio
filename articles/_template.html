@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARTICLE TITLE — Joseph Blessing Stephen</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+  /* ── Article page specific styles ── */
+  .article-page { max-width: 760px; margin: 0 auto; padding: 60px 24px 100px; }
+  .article-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none;
+    margin-bottom: 48px; transition: color .2s;
+  }
+  .article-back:hover { color: var(--accent); }
+  .article-back::before { content: '←'; }
+  .article-tag-line {
+    font-size: .65rem; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .article-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    line-height: 1.05; letter-spacing: .03em;
+    margin-bottom: 20px;
+  }
+  .article-meta-bar {
+    display: flex; align-items: center; gap: 20px;
+    font-size: .72rem; color: var(--muted);
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .article-meta-bar span { display: flex; align-items: center; gap: 6px; }
+  .article-hero-img {
+    width: 100%; aspect-ratio: 16/7;
+    margin-bottom: 40px; overflow: hidden;
+  }
+  .article-hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .article-hero-img .hero-placeholder {
+    width: 100%; height: 100%; min-height: 240px;
+  }
+
+  /* ── Article body typography ── */
+  .article-content { line-height: 1.85; font-size: 1rem; font-weight: 300; }
+  .article-content p { margin-bottom: 24px; }
+  .article-content h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem; letter-spacing: .04em;
+    margin: 48px 0 16px; color: var(--white);
+  }
+  .article-content h3 {
+    font-size: 1rem; font-weight: 500;
+    margin: 32px 0 12px; color: var(--white);
+  }
+  .article-content strong { color: var(--white); font-weight: 500; }
+  .article-content em { color: var(--muted); font-style: italic; }
+  .article-content a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,168,76,.3); transition: border-color .2s; }
+  .article-content a:hover { border-color: var(--gold); }
+  .article-content blockquote {
+    border-left: 3px solid var(--accent);
+    margin: 32px 0; padding: 16px 24px;
+    background: rgba(232,76,30,.05);
+    color: var(--muted); font-style: italic;
+  }
+  .article-content ul, .article-content ol {
+    padding-left: 24px; margin-bottom: 24px;
+  }
+  .article-content li { margin-bottom: 8px; }
+
+  /* ── Footer of article ── */
+  .article-footer-tags {
+    margin-top: 60px; padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,.07);
+    display: flex; gap: 10px; flex-wrap: wrap;
+  }
+  .article-tag-pill {
+    padding: 6px 14px; font-size: .65rem;
+    letter-spacing: .14em; text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,.1);
+    color: var(--muted);
+  }
+  .article-more {
+    margin-top: 16px;
+    text-align: center;
+  }
+  .article-more a {
+    display: inline-block; margin-top: 32px;
+    padding: 14px 32px;
+    border: 1px solid rgba(255,255,255,.2);
+    color: var(--white); text-decoration: none;
+    font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
+    transition: all .3s;
+  }
+  .article-more a:hover { background: var(--accent); border-color: var(--accent); }
+
+  /* Nav override for article pages */
+  nav { position: sticky; top: 0; z-index: 100; }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="../index.html">JBS<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html#social">Social & Content</a></li>
+    <li><a href="../index.html#film">Film & Editing</a></li>
+    <li><a href="../index.html#logos">Logos</a></li>
+    <li><a href="../index.html#articles" class="active">Articles</a></li>
+    <li><a href="../index.html#about">About</a></li>
+  </ul>
+</nav>
+
+<!-- ── ARTICLE ── -->
+<div class="article-page">
+
+  <a class="article-back" href="../index.html#articles">Back to Articles</a>
+
+  <div class="article-tag-line">CATEGORY · TAG</div>
+
+  <h1 class="article-headline">YOUR ARTICLE TITLE GOES HERE</h1>
+
+  <div class="article-meta-bar">
+    <span>By Joseph Blessing Stephen</span>
+    <span>· X min read</span>
+    <span>· Month Year</span>
+  </div>
+
+  <!-- Hero image — replace gradient with <img src="..."> when you have one -->
+  <div class="article-hero-img">
+    <div class="hero-placeholder bg-article-1"></div>
+  </div>
+
+  <!-- ── ARTICLE BODY — write your content here ── -->
+  <div class="article-content">
+
+    <p>Your opening paragraph goes here. Hook the reader in the first sentence — tell them why this matters.</p>
+
+    <h2>SECTION HEADING</h2>
+
+    <p>Body paragraph. Write naturally, use <strong>bold for key points</strong> and <em>italics for nuance</em>.</p>
+
+    <blockquote>Use blockquotes for memorable lines, key quotes, or things you want to stand out.</blockquote>
+
+    <p>Another paragraph. Keep paragraphs short — 3 to 5 sentences max reads best on screen.</p>
+
+    <h2>ANOTHER SECTION</h2>
+
+    <p>Continue writing...</p>
+
+  </div>
+  <!-- ── END ARTICLE BODY ── -->
+
+  <!-- Tags -->
+  <div class="article-footer-tags">
+    <span class="article-tag-pill">Tag One</span>
+    <span class="article-tag-pill">Tag Two</span>
+    <span class="article-tag-pill">Tag Three</span>
+  </div>
+
+  <!-- Back link -->
+  <div class="article-more">
+    <a href="../index.html#articles">← Back to all articles</a>
+  </div>
+
+</div>
+
+<script src="../script.js"></script>
+</body>
+</html>
