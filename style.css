@@ -7,6 +7,16 @@
     --muted: #6b6460;
   }
 
+  html { scroll-behavior: smooth; }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
