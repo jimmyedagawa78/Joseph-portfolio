@@ -43,3 +43,6 @@ to:
 ## Hosting
 Hosted on GitHub Pages.
 Live URL: `https://[your-username].github.io/[repo-name]`
+
+---
+*Test edit to trigger GitHub login.*
