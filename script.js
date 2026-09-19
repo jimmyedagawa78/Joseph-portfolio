@@ -91,14 +91,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Close modal on Escape key
+  // 4. Image Lightbox Modal System
+  const imageModal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalImageTitle = document.getElementById('modalImageTitle');
+  const closeImgModalBtn = document.getElementById('closeImgModalBtn');
+
+  window.openImageModal = (imageSrc, title) => {
+    if (imageModal && modalImage) {
+      modalImage.src = imageSrc;
+      if (modalImageTitle) modalImageTitle.textContent = title || 'Design Sample';
+      imageModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  const closeImageModal = () => {
+    if (imageModal) {
+      imageModal.classList.remove('active');
+      if (modalImage) modalImage.src = '';
+      document.body.style.overflow = '';
+    }
+  };
+
+  if (closeImgModalBtn) {
+    closeImgModalBtn.addEventListener('click', closeImageModal);
+  }
+
+  if (imageModal) {
+    imageModal.addEventListener('click', (e) => {
+      if (e.target === imageModal) {
+        closeImageModal();
+      }
+    });
+  }
+
+  // Close modals on Escape key
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && videoModal && videoModal.classList.contains('active')) {
-      closeVideoModal();
+    if (e.key === 'Escape') {
+      if (videoModal && videoModal.classList.contains('active')) closeVideoModal();
+      if (imageModal && imageModal.classList.contains('active')) closeImageModal();
     }
   });
 
-  // 4. Smooth Scrolling for Navigation Links
+  // 5. Smooth Scrolling for Navigation Links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
