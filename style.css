@@ -717,6 +717,52 @@ body {
   color: var(--accent-cyan);
 }
 
+/* Logo Showcase Grid */
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.logo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.logo-card:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(0, 242, 254, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 242, 254, 0.12);
+}
+.logo-card img {
+  height: 80px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  transition: transform 0.4s;
+}
+.logo-card:hover img {
+  transform: scale(1.08);
+}
+.logo-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+}
+.logo-card:hover .logo-title {
+  color: var(--text-main);
+}
+
 /* Footer CTA */
 .footer-cta {
   padding: 100px 0;
