@@ -722,45 +722,55 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .logo-card {
   background: var(--bg-card);
   border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  padding: 36px 24px;
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 14px;
   cursor: pointer;
   transition: var(--transition);
 }
 .logo-card:hover {
   background: var(--bg-card-hover);
   border-color: rgba(0, 242, 254, 0.3);
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 242, 254, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4), 0 0 16px rgba(0, 242, 254, 0.1);
+}
+.logo-img-wrap {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .logo-card img {
-  height: 80px;
+  max-height: 50px;
+  max-width: 120px;
   width: auto;
-  max-width: 160px;
+  height: auto;
   object-fit: contain;
   transition: transform 0.4s;
 }
 .logo-card:hover img {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 .logo-title {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   color: var(--text-muted);
   text-align: center;
 }
 .logo-card:hover .logo-title {
-  color: var(--text-main);
+  color: var(--accent-cyan);
 }
 
 /* Footer CTA */
