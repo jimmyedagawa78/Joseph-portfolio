@@ -3,30 +3,6 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Custom Cursor Glow
-  const cursorDot = document.getElementById('cursorDot');
-  const cursorGlow = document.getElementById('cursorGlow');
-  
-  if (cursorDot && cursorGlow && !window.matchMedia('(pointer: coarse)').matches) {
-    let mouseX = 0, mouseY = 0;
-    let glowX = 0, glowY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      cursorDot.style.left = `${mouseX}px`;
-      cursorDot.style.top = `${mouseY}px`;
-    });
-
-    const animateGlow = () => {
-      glowX += (mouseX - glowX) * 0.15;
-      glowY += (mouseY - glowY) * 0.15;
-      cursorGlow.style.left = `${glowX}px`;
-      cursorGlow.style.top = `${glowY}px`;
-      requestAnimationFrame(animateGlow);
-    };
-    animateGlow();
-  }
 
   // 2. Portfolio Category Filtering
   const filterBtns = document.querySelectorAll('.filter-btn');
